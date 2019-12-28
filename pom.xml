@@ -13,6 +13,7 @@
   <groupId>cn.lianhy</groupId>
   <artifactId>springboot-restful-web-service</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
 
   <name>springboot-restful-web-service</name>
 
@@ -40,10 +41,18 @@
   </dependencies>
 
   <build>
+    <finalName>web</finalName>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>repackage</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
